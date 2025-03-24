@@ -1,15 +1,13 @@
-A, B = input().split("-")
-black=["a1","a3","a5","a7","b2","b4","b6","b8",
-       "c1","c3","c5","c7","d2","d4","d6","d8",
-       "e1","e3","e5","e7","f2","f4","f6","f8",
-       "g1","g3","g5","g7","g2","h4","h6","h8"]
-white=["a2","a4","a6","a8","b1","b3","b5","b7",
-       "c2","c4","c6","c8","d1","d3","d5","d7",
-       "e2","e4","e6","e8","f1","f3","f5","f7",
-       "g2","g4","g6","g8","g1","h3","h5","h7"]
-if A in black and B in white :
-    print("вернр")
-elif A in white and B in black :
-    print("верно")
+pstn = input()
+ltr1 = pstn[0]
+n1 = int(pstn[1])
+ltr2 = pstn[3]
+n2 = int(pstn[4])
+ltr_1 = ord(ltr1) - ord('a') + 1
+ltr_2 = ord(ltr2) - ord('a') + 1
+if (abs(ltr_1 - ltr_2) == 1 and
+    abs(n1 - n2) == 2) or (abs(ltr_1 - ltr_2) == 2 and
+                                     n1 - n2 == 1):
+    print('верно')
 else:
-    print("ошибка")
+    print('ошибка')
