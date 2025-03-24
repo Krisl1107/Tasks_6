@@ -2,9 +2,9 @@ K=int(input())
 if K<100:
     lst=K%10
 elif 1000>K>100:
-    lst_1=K%100
+    lst=K%100
 
-if K<=5 and K%5==0 or K<=5 and K%7==0:
+if K>=5 and K%5==0 or K>=5 and K%7==0:
     print("да")
 elif K>7 and lst==7 or K>7 and lst==2 and (K-7)%5==0:
     print("да")
